@@ -19,6 +19,37 @@ for x in [-7,-5, -3, 1,3, 5,7, 9]:
 	myLeaves = vizshape.addCone(height = 3.0, radius = 1.5)
 	myLeaves.color([0,1,0])
 	myLeaves.setPosition([x,3.5,z])
+
+viz.startLayer(viz.TRIANGLE_FAN)
+viz.vertexColor(viz.BLUE)
+viz.vertex(-5, 0.1, -1000)
+viz.vertex(-5, 0.1, -5)
+viz.vertex(-3, 0.1, 0)
+viz.vertex(2, 0.1, 0)
+viz.vertex(1, 0.1, 10)
+viz.vertexColor(0, 0, 0.8, 1)
+viz.vertex(-1, 0.1, 1000)
+viz.vertex(3, 0.1, 7)
+viz.vertex(3, 0.1, 0)
+myStream = viz.endLayer()
+myStream.setPosition(-10, 0.1, 0)
+
+viz.startLayer(viz.POLYGON)
+viz.vertexColor(0.263, 0.078, 0.078)
+#viz.vertex(-5, 0.1, -1000)
+viz.vertex(-5, 0.1, -5)
+viz.vertex(-3, 0.1, 0)
+viz.vertex(2, 0.1, 0)
+#viz.vertex(1000, 0.1, 5)
+viz.vertex(4, 0.1, 2)
+viz.vertex(0, 0.1, -5)
+#viz.vertex(-1, 0.1, 1000)
+#viz.vertex(3, 0.1, 7)
+#viz.vertex(3, 0.1, 0)
+myPath = viz.endLayer()
+myPath.setPosition(5, 0.1, 0)
+myPath.setScale([2,2,2])
+
 # End Ben's Code
 
 
